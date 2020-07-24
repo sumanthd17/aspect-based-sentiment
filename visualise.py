@@ -62,10 +62,10 @@ def tokenize(data):
     return rset
 
 
-data = parse_file("./data/sentihood-train.json")
+def parse_train_data():
+    data = parse_file("./data/sentihood-train.json")
 
-all_aspects = get_aspects(data)
-data = convert_input(data, all_aspects)
-data = tokenize(data)
-# print(all_aspects)
-# print(data[:15])
+    all_aspects = get_aspects(data)
+    data = convert_input(data, all_aspects)
+    data = tokenize(data)
+    return data
