@@ -79,3 +79,11 @@ def parse_val_data():
     data = tokenize(data)
     return data
 
+
+def parse_test_data():
+    data = parse_file("./data/sentihood-test.json")
+
+    all_aspects = get_aspects(data)
+    data = convert_input(data, all_aspects)
+    data = tokenize(data)
+    return data
