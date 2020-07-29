@@ -4,7 +4,7 @@ train_data = parse_train_data()
 val_data = parse_val_data()
 test_data = parse_test_data()
 
-top_aspects = ["general", "price", "safety", "trans-location"]
+top_aspects = ["general", "price", "safety", "transit-location"]
 
 with open("QA_pairs/train-QA.csv", "w") as f:
     for td in train_data:
