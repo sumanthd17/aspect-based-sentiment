@@ -17,7 +17,7 @@ with open("QA_pairs/train-QA.csv", "w") as f:
             f.write("\n")
 
 with open("QA_pairs/val-QA.csv", "w") as f:
-    for tf in val_data:
+    for td in val_data:
         if td[3] in top_aspects:
             id_ = td[0]
             ans = " ".join(td[1])
