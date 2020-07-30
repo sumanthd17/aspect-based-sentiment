@@ -6,7 +6,7 @@ def parse_file(file_):
     with open(file_) as f:
         data = json.load(f)
 
-    df = pd.read_csv("prediction.csv")
+    df = pd.read_csv("trained-top4.csv")
 
     rset = []
     for d in data:
@@ -26,7 +26,7 @@ def parse_file(file_):
 
 data = parse_file("./data/sentihood-test.json")
 
-with open("preds.jsonl", "w") as outfile:
+with open("trained-top4.jsonl", "w") as outfile:
     for d in data:
         json.dump(d, outfile)
         outfile.write("\n")
