@@ -5,7 +5,7 @@ total_acc = 0
 total_aspects = 0
 total_sentiments = 0
 
-file_ = "trained-top4.jsonl"
+file_ = "preds.jsonl"
 
 with open(file_, "r") as f:
     jsonl_content = list(f)
